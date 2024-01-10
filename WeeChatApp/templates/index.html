@@ -1,0 +1,29 @@
+{% extends "base.html" %}{% block title %} Home {%endblock%}{% block content %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6 bg-success vh-100">
+      <h4>Welcome to</h4>
+      <h1>WeeChat</h1>
+    </div>
+    <div class="col-6 bg-light">
+      <form method="POST">
+        {% csrf_token %}
+        <div class="input-chat">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter your weechat friend name"
+            name="room_code" />
+          <button
+            class="btn btn-primary rounded-2 mt-2 submit-button"
+            id="chat-init-btn">
+            Go
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

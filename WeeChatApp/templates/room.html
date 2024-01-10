@@ -1,0 +1,39 @@
+{% extends "base.html" %} {% block title %} Chat {% endblock %} {% block content %}
+
+<div class="container-fluid mx-0 px-0 bg-success">
+  <h2>Enjoy WeeChat!</h2>
+  <div class="row">
+    <div class="col-lg-4 bg-secondary">
+
+    </div>
+    <div class="col-lg-8 vh-100 bg-light px-0">
+      <div class="col">
+        <div>
+          <h3>Chatting with {{room_code}}</h3>
+
+          <div id="messages" class="mt-4">
+            <div class="container-chatbox passive">
+              <p>Hello. How are you today?</p>
+            </div>
+
+            <div class="container-chatbox active">
+              <p>Hey! I'm fine. Thanks for asking!</p>
+            </div>
+          </div>
+        </div>
+        <div class="input-message">
+          <input
+            type="text"
+            class="form-control"
+            id="textMsg"
+            placeholder="Enter your message" />
+          <button id="sendMsg" class="btn btn-primary rounded-2 mt-2">
+            Send
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,5 @@
+.idea/
+chatappenv/
+Pipfile
+Pipfile.lock
+WeeChatApp/db.sqlite3
